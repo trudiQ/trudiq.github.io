@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
 header {
     width: 100%;
     background: #f4f4f4;
-    padding: 20px 0;
+    padding: 1.25em 0; /* 20px converted to em */
     text-align: left;
     padding-left: 10%;
 }
@@ -19,38 +19,68 @@ header {
 main {
     display: flex;
     width: 80%;
-    margin-top: 20px;
+    margin-top: 1.25em; /* 20px converted to em */
 }
 
 .left-column, .right-column {
     flex: 1;
-    padding: 20px;
+    padding: 1.25em; /* 20px converted to em */
 }
 
 .left-column {
-    max-width: 300px;
+    max-width: 18.75em; /* 300px converted to em */
 }
 
 .profile-photo {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em; /* 20px converted to em */
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 1.25em; /* 20px converted to em */
 }
 
+/* General heading styles */
 h1 {
     margin: 0;
-    font-size: 2em;
 }
 
 h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    border-bottom: 0.125em solid #ccc; /* 2px converted to em */
+    padding-bottom: 0.3125em; /* 5px converted to em */
+    margin-bottom: 0.625em; /* 10px converted to em */
+}
+
+/* Specific font sizes for left column */
+.left-column h1 {
+    font-size: 1.5em; /* 24px converted to em */
+}
+
+.left-column h2 {
+    font-size: 1.25em; /* 20px converted to em */
+}
+
+.left-column h3 {
+    font-size: 1.125em; /* 18px converted to em */
+}
+
+.left-column p, .left-column li {
+    font-size: 0.875em; /* 14px converted to em */
+}
+
+/* Specific font sizes for right column */
+.right-column h1 {
+    font-size: 1.75em; /* 28px converted to em */
+}
+
+.right-column h2 {
+    font-size: 1.5em; /* 24px converted to em */
+}
+
+.right-column p, .right-column li {
+    font-size: 1em; /* 16px converted to em */
 }
 
 footer {
@@ -58,7 +88,7 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 0.625em 0; /* 10px converted to em */
     position: fixed;
     bottom: 0;
 }
