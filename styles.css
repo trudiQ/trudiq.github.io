@@ -8,87 +8,150 @@ body {
     align-items: center;
 }
 
+/* Header */
 header {
     width: 100%;
-    background: #f4f4f4;
-    padding: 1.25em 0; /* 20px converted to em */
+    background: #eea41f; /* Updated background color */
+    padding: 0.1em 0; /* Decreased height by reducing padding */
     text-align: left;
-    padding-left: 10%;
+    padding-left: 42%; /* Align header text with the left column */
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Slightly larger font size */
+    color: #fff; /* Ensure text color contrasts with the background */
+}
+
+
+/* Adjust the main container for narrower content */
 main {
     display: flex;
-    width: 80%;
-    margin-top: 1.25em; /* 20px converted to em */
+    width: 60%; /* Adjust here for narrower or wider content */
+    margin-top: 1.25em; /* 20px */
 }
 
 .left-column, .right-column {
     flex: 1;
-    padding: 1.25em; /* 20px converted to em */
+    padding: 1.25em; /* 20px */
 }
 
 .left-column {
-    max-width: 18.75em; /* 300px converted to em */
+    max-width: 18.75em; /* 300px */
 }
 
 .profile-photo {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-bottom: 1.25em; /* 20px converted to em */
+    margin-bottom: 1.25em; /* 20px */
 }
 
 section {
-    margin-bottom: 1.25em; /* 20px converted to em */
+    margin-bottom: 1.25em; /* 20px */
 }
 
-/* General heading styles */
-h1 {
-    margin: 0;
-}
-
-h2 {
-    border-bottom: 0.125em solid #ccc; /* 2px converted to em */
-    padding-bottom: 0.3125em; /* 5px converted to em */
-    margin-bottom: 0.625em; /* 10px converted to em */
-}
-
-/* Specific font sizes for left column */
-.left-column h1 {
-    font-size: 1.5em; /* 24px converted to em */
-}
-
+/* Left column heading styles */
 .left-column h2 {
-    font-size: 1.25em; /* 20px converted to em */
+    font-size: 1.0em; /* Smaller h2 for left column */
+    border-bottom: 0.125em solid #eea41f;
+    padding-bottom: 0.3125em;
+    margin: 0 0 0.625em;
 }
 
 .left-column h3 {
-    font-size: 1.125em; /* 18px converted to em */
+    font-size: 0.9em; /* Smaller h3 for left column */
+    margin: 0 0 0.625em;
 }
 
-.left-column p, .left-column li {
-    font-size: 0.875em; /* 14px converted to em */
-}
-
-/* Specific font sizes for right column */
-.right-column h1 {
-    font-size: 1.75em; /* 28px converted to em */
-}
-
+/* Right column heading styles */
 .right-column h2 {
-    font-size: 1.5em; /* 24px converted to em */
+    font-size: 1.5em; /* Larger h2 for right column */
+    border-bottom: 0.125em solid #eea41f;
+    padding-bottom: 0.3125em;
+    margin: 0 0 0.625em;
 }
 
-.right-column p, .right-column li {
-    font-size: 1em; /* 16px converted to em */
+.right-column h3 {
+    font-size: 1.25em; /* Larger h3 for right column */
+    margin: 0 0 0.625em;
 }
 
+/* Paragraph styles for left and right columns */
+.left-column p {
+    font-size: 0.8em; /* Smaller paragraph text for left column */
+    line-height: 1.4;
+    color: #555;
+}
+
+.right-column p {
+    font-size: 1em; /* Larger paragraph text for right column */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Footer */
 footer {
     width: 100%;
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 0.625em 0; /* 10px converted to em */
+    padding: 0.3125em 0;
     position: fixed;
     bottom: 0;
+}
+
+/* News section */
+#news {
+    margin-bottom: 2em;
+}
+
+.news-item {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.news-date {
+    flex: 0 0 10em;
+    font-weight: bold;
+    color: #555;
+}
+
+.news-content {
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* Publications section */
+#publications {
+    margin-bottom: 2em;
+}
+
+.publication-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5em;
+}
+
+/* Adjust publication figure sizes */
+.publication-figure {
+    flex: 0 0 14em; /* Adjust here for larger or smaller figures */
+    margin-right: 1em;
+}
+
+.publication-figure img {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+}
+
+.publication-details h3 {
+    margin: 0;
+    font-size: 1.0em;
+}
+
+.publication-details p {
+    margin: 0.2em 0;
+    line-height: 1.4;
 }
