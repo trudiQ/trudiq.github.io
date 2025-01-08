@@ -114,5 +114,24 @@
     <footer>
         <p>&copy; 2025 Trudi Qi</p>
     </footer>
+    <script>
+        function adjustHeaderPadding() {
+            const mainWidth = 1240; // The fixed width of the main content in pixels
+            const windowWidth = window.innerWidth; // Get the current window width
+            const paddingLeft = (windowWidth - mainWidth); // Calculate the left padding
+            const header = document.querySelector('header');
+            if (paddingLeft > 0) {
+                header.style.paddingLeft = `${paddingLeft}px`;
+            } else {
+                header.style.paddingLeft = '0px'; // Prevent negative padding
+            }
+        }
+
+        // Adjust on load
+        window.addEventListener('load', adjustHeaderPadding);
+
+        // Adjust on window resize
+        window.addEventListener('resize', adjustHeaderPadding);
+    </script>
 </body>
 </html>

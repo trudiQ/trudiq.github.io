@@ -14,7 +14,7 @@ header {
     background: #9E2D3B; /* Updated background color: yellow: #eea41f*/
     padding: 0.1em 0; /* Decreased height by reducing padding */
     text-align: left;
-    padding-left: 42%; /* Align header text with the left column */
+    /* padding-left: 52%; Align header text with the left column */
 }
 
 header h1 {
@@ -27,7 +27,7 @@ header h1 {
 /* Adjust the main container for fixed-width centered content */
 main {
     display: flex;
-    width: 960px; /* Fixed width for the main content */
+    width: 1240px; /* Fixed width for the main content */
     margin: 0 auto; /* Center the content with blank spaces on the sides */
     margin-top: 1.25em; /* Adjust vertical spacing */
 }
@@ -96,6 +96,8 @@ section {
     font-size: 0.9em; /* Larger paragraph text for right column */
     line-height: 1.6;
     color: #333;
+    margin-top: 0.5em; /* Reduced blank space above each paragraph */
+    margin-bottom: 0.5em; /* Reduced blank space below each paragraph */
 }
 
 /* Footer */
