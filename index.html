@@ -28,20 +28,25 @@
                 <p>Swenson Hall of Engineering, Room N325</p>
                 <p>Keck Center for Science and Engineering</p>
                 <p>One University Drive, Orange, CA 92866</p>
+                <div class="social-icons">
+                    <a href="mailto:dqi@chapman.edu" target="_blank">
+                        <img src="images/envelope-icon.svg" alt="Email" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/trudiqi" target="_blank">
+                        <img src="images/linkedin-icon.svg" alt="LinkedIn" class="icon">
+                    </a>
+                    <a href="https://trudiq.github.io/misc/CV_T.Qi.pdf" target="_blank">
+                        <img src="images/graduation-cap-icon.svg" alt="CV" class="icon">
+                    </a>
+                    <a href="https://github.com/trudiQ" target="_blank">
+                        <img src="images/github-icon.svg" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=egUCcD0AAAAJ&hl=en" target="_blank">
+                        <img src="images/google-scholar-icon.svg" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
             </section>
-            <section id="teaching">
-                <h2>Teaching</h2>
-                <h3>Spring 2025</h3>
-                <p>CPSC 515: Computer Graphics and Computational Geometry</p>
-                <p>CPSC 360: Computer Graphics</p>
-                <h3>Fall 2024</h3>
-                <p>CPSC 230: Computer Science I</p>
-                <h3>Spring 2024</h3>
-                <p>CPSC 360: Computer Graphics</p>
-                <h3>Fall 2023</h3>
-                <p>CPSC 230: Computer Science I</p>
-                <!-- Add more courses as needed -->
-            </section>
+            <div id="teaching"></div>
         </div>
         <div class="right-column">
             <section id="introduction">
@@ -65,50 +70,8 @@
                     building LEGO creations, playing video games, and embracing the great outdoors. 
                 </p>
             </section>
-            <section id="news">
-                <h2>News</h2>
-                <div class="news-item">
-                    <div class="news-date">November 2024</div>
-                    <div class="news-content">I was invited to present our latest research, MoViAn, 
-                        for multidimensional human motion visualization and annotation at 
-                        the 16th International Conference on Ubiquitous Computing and Ambient Intelligence 
-                        (<a href="https://ucami.org">UCAmI’24</a>) in Belfast, Northern Ireland.</div>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">October 2024</div>
-                    <div class="news-content">BLABLA</div>
-                </div>
-                <!-- Add more news items as needed -->
-            </section>            
-            <section id="publications">
-                <h2>Publications</h2>
-                <div class="publication-item">
-                    <div class="publication-figure">
-                        <img src="images/MoViAn/movian_2.jpg" alt="Figure 1">
-                    </div>
-                    <div class="publication-details">
-                        <h3><a href="#">MoViAn: Advancing Human Motion Analysis with 3D Visualization and Annotation</a></h3>
-                        <p>T.D. Qi, I. Browen, H.M. Camarillo-Abad, and F.L. Cibrain</p>
-                        <p><em>16th International Conference on Ubiquitous Computing & Ambient Intelligence (UCAmI’24)</em></p>
-                        <p>
-                            <a href="#">Project Page</a> | <a href="#">arXiv</a> | <a href="#">Code</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-figure">
-                        <img src="images/MoViAn/movian_1.jpg" alt="Figure 2">
-                    </div>
-                    <div class="publication-details">
-                        <h3><a href="#">Creative Insights into Motion: Enhancing Human Activity Understanding with 3D Data Visualization</a></h3>
-                        <p>I. Browen, H.M. Camarillo-Abad, F.L. Cibrain, and T.D.Qi</p>
-                        <p><em>ACM Creativity & Cognition (C&C 2024)</em></p>
-                        <p>
-                            <a href="#">Project Page</a> | <a href="#">arXiv</a> | <a href="#">Code</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <div id="news"></div>
+            <div id="publications"></div>
         </div>
     </main>
     <footer>
@@ -132,6 +95,19 @@
 
         // Adjust on window resize
         window.addEventListener('resize', adjustHeaderPadding);
+    </script>
+
+    <script>
+        function loadSection(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(error => console.error(`Error loading ${file}:`, error));
+        }
+
+        loadSection('teaching', 'sources/teaching.html');
+        loadSection('news', 'sources/news.html');
+        loadSection('publications', 'sources/publications.html');
     </script>
 </body>
 </html>
