@@ -52,8 +52,13 @@ main {
     margin-top: 1.25em; /* Adjust vertical spacing */
 }
 
+main a {
+    color: #9E2D3B;
+}
+
 .left-column, .right-column {
-    flex: 1;
+    flex: 2; /* Allows the right column to adjust proportionally */
+    margin-bottom: 2em; /* Increased gap between right-column content and footer */
     padding: 1.25em; /* 20px padding */
 }
 
@@ -122,11 +127,12 @@ section {
 
 /* Footer */
 footer {
+    font-size: 0.9em;
     width: 100%;
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 0.3125em 0;
+    padding: 0.02em 0;
     position: fixed;
     bottom: 0;
 }
