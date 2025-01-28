@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Students</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="../stylesheet">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="images/logos/TQ_logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="students.html">Research Students</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Research Students</h1>
+    </header>
+    <main>
+        <section>
+            <h2>True Virtual Intelligence Lab (TVIL) Members</h2>
+            <p>To be added...</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Trudi Qi</p>
+    </footer>
+    <script>
+        function adjustHeaderPadding() {
+            const mainWidth = 1240; // The fixed width of the main content in pixels
+            const windowWidth = window.innerWidth; // Get the current window width
+            const paddingLeft = (windowWidth - mainWidth); // Calculate the left padding
+            const header = document.querySelector('header');
+            if (paddingLeft > 0) {
+                header.style.paddingLeft = `${paddingLeft}px`;
+            } else {
+                header.style.paddingLeft = '0px'; // Prevent negative padding
+            }
+        }
+
+        // Adjust on load
+        window.addEventListener('load', adjustHeaderPadding);
+
+        // Adjust on window resize
+        window.addEventListener('resize', adjustHeaderPadding);
+    </script>
+</body>
+</html>

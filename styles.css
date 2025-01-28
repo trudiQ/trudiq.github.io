@@ -47,6 +47,7 @@ body {
     /* writing-mode: vertical-rl; Rotate text for vertical display */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     z-index: 1000; /* Ensure it appears above other content */
+    border-radius: 0 10px 0 0;
 }
 
 /* Header */
@@ -213,3 +214,59 @@ footer {
     margin: 0.2em 0;
     line-height: 1.4;
 }
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 0.5em 1em;
+    z-index: 1001; /* Make sure it appears above other elements */
+    border-radius: 0 0 0 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+}
+
+/* .nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #9E2D3B; 
+    transition: color 0.3s;
+} */
+
+.nav-links li {
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.nav-links li:hover {
+    background-color: #EEA41F; /* Yellow background: #EEA41F */
+    border-radius: 5px; /* Optional: Rounded corners */
+
+    padding: 0.8em 1.2em; /* Increase vertical and horizontal padding on hover */
+    transition: all 0.3s ease; /* Smooth size increase */
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #9E2D3B; /* Default text color */
+    display: block; /* Ensures the entire area is clickable */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF; 
+}
+
